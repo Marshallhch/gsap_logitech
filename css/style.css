@@ -596,5 +596,78 @@
   left:-20px;
   margin:auto;
   padding-top:190px;
-  background:#ccc;
+  box-sizing:content-box
+}
+
+#section05 .page01 .visual_container .logo{
+  position:absolute;
+  top:223px;
+  right:410px;
+  animation: rotate_page01 10s linear infinite;
+}
+
+@keyframes rotate_page01{
+  100%{
+    transform:rotate(360deg);
+  }
+}
+
+#section05 .page01 .keyboard{
+  position:absolute;
+  top:210px;
+  left:0;
+}
+
+#section05 .page01 .title{
+  width:920px;
+  height:370px;
+  position:absolute;
+  right:0;
+  bottom:0;
+  text-align: right;
+}
+
+#section05 .page01 .visual_container .title > div{
+  transform: translateY(35px);
+  opacity: 0;
+  transition: all 1s;
+}
+
+#section05.on .page01 .visual_container .title > div{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#section05 .page01 .visual_container .title .chapter{
+  margin-right: 250px;
+  margin-bottom: 18px;
+}
+
+#section05 .page01 .visual_container .title .title01{
+  margin-right: 90px;
+  margin-bottom: -18px;
+  transition-delay: 0.2s;
+}
+
+#section05 .page01 .visual_container .title .title02 {
+  margin-bottom: -8px;
+  transition-delay: 0.4s;
+}
+
+#section05 .page01 .visual_container .title .title03{
+  margin-right: 60px;
+  margin-bottom: 17px;
+  transition-delay: 0.6s;
+}
+
+#section05 .page01 .visual_container .title .subtxt{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition-delay: 0.8s;
+}
+
+#section05 .page01 .visual_container .title .title04{
+  margin-right: 97px;
+  transition-delay: 0.8s;
 }
