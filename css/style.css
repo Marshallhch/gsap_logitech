@@ -554,3 +554,47 @@
   text-align: right;
   margin-right:158px;
 }
+
+/* section 05 style */
+#section05{
+  background:#ddd;
+  height:1000vh;
+  z-index:999;
+}
+
+.trigger-this-5{
+  height:100%;
+}
+
+.fix-this-5{
+  height:100vh;
+  position:relative;
+}
+
+.fix-this-5 .page{
+  height:100vh;
+  width:100vw; /* viewport height : 화면 가로 크기 */
+  position:relative;
+  background:#000;
+}
+
+#section05 .underbar{
+  position:absolute;
+  top:88vh;
+  left:5%;
+  z-index:999;
+}
+
+#section05 .underbar img{
+  width:90%;
+}
+
+#section05 .visual_container{
+  width:1303px;
+  height:575px;
+  position:relative;
+  left:-20px;
+  margin:auto;
+  padding-top:190px;
+  background:#ccc;
+}

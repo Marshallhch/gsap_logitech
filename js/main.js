@@ -182,7 +182,7 @@ window.addEventListener('DOMContentLoaded', function () {
     start: 'top top',
     end: 'bottom bottom',
     scrub: 1,
-    markers: true,
+    // markers: true,
   });
 
   sec04.to('#section04 .title_w', { x: -5500 }, 0);
