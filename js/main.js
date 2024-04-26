@@ -486,7 +486,6 @@ window.addEventListener('DOMContentLoaded', function () {
       start: '1800 top',
       end: 'bottom bottom',
       scrub: true,
-      markers: true,
       // markers: true,
       onEnter: () => {
         // 스크롤이 트리거 요소의 시작 위치에 도달했을 때
@@ -514,7 +513,7 @@ window.addEventListener('DOMContentLoaded', function () {
         trigger: section,
         start: `${position} top`,
         scrub: true,
-        markers: true,
+        // markers: true,
         toggleClass: 'on',
       },
     });
@@ -523,13 +522,68 @@ window.addEventListener('DOMContentLoaded', function () {
   section0809Title('#section08', '-300');
   section0809Title('#section09', '-500');
 
-  // gsap.to('#section09', {
-  //   scrollTrigger: {
-  //     trigger: '#section09',
-  //     start: '-500 top',
-  //     scrub: true,
-  //     // markers: true,
-  //     toggleClass: 'on',
-  //   },
-  // });
+  // section 091 header remove class on
+  gsap.to('.fix-this-91', {
+    scrollTrigger: {
+      trigger: '.trigger-this-91',
+      start: 'top top',
+      end: 'bottom bottom',
+      scrub: true,
+      pin: true,
+      // markers: true,
+      onEnter: () => {
+        $('#header').removeClass('on');
+      },
+      onLeaveBack: () => {
+        $('#header').addClass('on');
+      },
+    },
+  });
+
+  // section 091 title text slide up animation
+  gsap.to('#section091', {
+    scrollTrigger: {
+      trigger: '#section091',
+      start: '-300 top',
+      scrub: true,
+      toggleClass: 'on',
+      // markers: true,
+    },
+  });
+
+  // section 091 mouse image animation
+  gsap.to('#section091 .mouse', {
+    x: 0,
+    y: -2000,
+    rotation: 90,
+    scrollTrigger: {
+      trigger: '#section091',
+      start: '500 top',
+      scrub: true,
+      // markers: true,
+    },
+  });
+
+  // section 10 horizontal scroll animation
+  const section10pages = document.querySelectorAll('#section10 .page');
+  // console.log(section10pages);
+  let sec10_total = 0;
+
+  section10pages.forEach((section) => {
+    sec10_total += section.clientWidth; // 각각의 page 가로크기 합산
+  });
+
+  // console.log(sec10_total);
+
+  gsap.to('.fix-this-10', {
+    x: -(sec10_total - innerWidth),
+    scrollTrigger: {
+      trigger: '.trigger-this-10',
+      start: 'top top',
+      end: 'bottom bottom',
+      pin: true,
+      scrub: true,
+      // markers: true,
+    },
+  });
 });
