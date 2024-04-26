@@ -339,7 +339,6 @@ window.addEventListener('DOMContentLoaded', function () {
     scrollTrigger: {
       trigger: '#section06',
       start: 'top top',
-      pin: true,
       scrub: true,
       toggleClass: 'on',
       // markers: true,
@@ -364,10 +363,58 @@ window.addEventListener('DOMContentLoaded', function () {
     start: 'top top',
     end: 'bottom bottom',
     scrub: true,
-    markers: true,
+    // markers: true,
   });
 
   sec06.to('#section06 .side .left', { x: -1000 }, 0);
   sec06.to('#section06 .side .right', { x: 1000 }, 0);
   sec06.to('#section06 .underbar', { y: 1000 }, 0);
+
+  // section 06 chapter image move animation
+  gsap.to('#section06 .visual_container .chapter', {
+    x: 480,
+    scrollTrigger: {
+      trigger: '#section06',
+      start: '1200 top',
+      end: '5000 bottom',
+      scrub: true,
+      // markers: true,
+    },
+  });
+
+  // section 06 sqare height 0 animation
+  gsap.to('#section06 .visual_container .square > div', {
+    height: 0,
+    scrollTrigger: {
+      trigger: '#section06',
+      start: '1200 top',
+      end: '7000 bottom',
+      scrub: true,
+      // markers: true,
+    },
+  });
+
+  // section 06 sqare height 0 animation
+  gsap.to('#section06 .visual_container .title', {
+    x: 180,
+    scrollTrigger: {
+      trigger: '#section06',
+      start: '1200 top',
+      end: '5000 bottom',
+      scrub: true,
+      // markers: true,
+    },
+  });
+
+  // section 06 headset move animation
+  gsap.to('#section06 .visual_container .headset', {
+    x: 1800,
+    scrollTrigger: {
+      trigger: '#section06',
+      start: '1200 top',
+      end: 'bottom bottom',
+      scrub: true,
+      markers: true,
+    },
+  });
 });
