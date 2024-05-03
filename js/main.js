@@ -661,4 +661,11 @@ window.addEventListener('DOMContentLoaded', function () {
 
   scrollMouse('.odd', -innerHeight);
   scrollMouse('.even', innerHeight);
+
+  // scroll move to each section
+  const sections = $('[data-idx]');
+
+  for (let i = 0; i < sections.length; i++) {
+    $('.indicators').append(`<span class="point-${i}"></span>`);
+  }
 });
